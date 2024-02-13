@@ -1,7 +1,20 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()            // << --- ADD This
+    }
+
+    dependencies {
+      //  classpath 'com.android.tools.build:gradle:7.1.3'
+        //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
+    //id("java")
 }
 
 android {
@@ -27,6 +40,11 @@ android {
             )
         }
     }*/
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -70,3 +88,20 @@ dependencies {
     implementation("com.intuit.sdp:sdp-android:1.1.0")
 
 }
+ //5. Publishing:
+/*
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.GIT_USER_NAME'
+            artifactId = 'REPO_NAME'
+            version = "VERSION"
+            pom {
+                description = 'DESCRIPTION'
+            }
+        }
+    }
+    repositories {               // << --- ADD This
+        mavenLocal()
+    }
+}*/
