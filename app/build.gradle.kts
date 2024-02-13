@@ -40,11 +40,11 @@ android {
             )
         }
     }*/
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
-        }
-    }
+//    java {
+//        toolchain {
+//            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
+//        }
+//    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -103,5 +103,20 @@ publishing {
     }
     repositories {               // << --- ADD This
         mavenLocal()
+    }
+}*/
+/*publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.ArvindKumarShishodia'
+            artifactId = 'testlib2'
+            version = "1.0.0"
+            pom {
+                description = 'First Android library'
+            }
+        }
+    }
+    repositories {               // << --- ADD This
+        mavenCentral()
     }
 }*/
