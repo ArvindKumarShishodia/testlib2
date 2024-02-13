@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.apache.ivy.core.module.id.ArtifactId
+
 buildscript {
     repositories {
         google()
@@ -85,7 +87,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    api("com.intuit.sdp:sdp-android:1.1.0"){
+    api("com.intuit.sdp:sdp-android:1.1.0@aar"){
         setTransitive(true)
     }
     /*configurations.all{
@@ -125,5 +127,31 @@ publishing {
     }
     repositories {               // << --- ADD This
         mavenCentral()
+    }
+}*/
+/*
+publishing {
+    publications {
+        register<MavenPublication>("mavenJava") {
+            artifactId = "testlib2
+            from(components["java"])
+            artifact("")
+            pom {
+                name.set("Project Name")
+            }
+        }
+    }
+}*/
+
+/*
+publishing {
+    publications {
+        repositories(MavenPublication) {
+            groupId ="org.gradle.sample"
+            artifactId ="project1-sample"
+            version ='1.1'
+
+            from components.java
+        }
     }
 }*/
