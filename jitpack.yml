@@ -5,4 +5,4 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
   - FILE="-Dfile=app-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.ArvindKumarShishodia -DartifactId=testlib2 -Dversion=1.0.5 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.ArvindKumarShishodia -DartifactId=testlib2 -Dversion=1.0.6 -Dpackaging=aar -DgeneratePom=true
