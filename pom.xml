@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ArvindKumarShishodia</groupId>
     <artifactId>testlib2</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <description>First Android library</description>
     <dependencies>
@@ -12,7 +12,7 @@
             <groupId>com.intuit.sdp</groupId>
             <artifactId>sdp-android</artifactId>
             <version>1.1.0</version>
-            <scope>compile</scope>
+            <!--<scope>compile</scope>-->
         </dependency>
     </dependencies>
 </project>
