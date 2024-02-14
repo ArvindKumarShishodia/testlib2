@@ -87,8 +87,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    api("com.intuit.sdp:sdp-android:1.1.0@aar"){
-        setTransitive(true)
+    api("com.intuit.sdp:sdp-android:1.1.0"){
+        isTransitive = true
     }
     /*configurations.all{
         resolutionStrategy{
